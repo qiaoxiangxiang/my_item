@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中药百科-列表</title>
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- 本页引入 -->
+    <link rel="stylesheet" href="../css/detail/detail_image.css">
+</head>
+
+<body>
+    <div id="app_body">
+        <div class="gong_top"></div>
+        <div class="content">
+            <div class="content_center">
+                <div class="content_center_img">
+                    <div class="left_img">
+                        <img class="left_image" src="../img/detail/detail_img_03.png" alt="">
+                    </div>
+                    <div class="right_img">
+                        <div class="fanhui">
+                            <a href="javascript:;" onClick="javascript:history.back(-1);">
+                                <img class="fanhui_img" src="../img/detail/detail_11.png" alt="">
+                                <span class="fanhui_txt">返回</span>
+                            </a>
+                        </div>
+                        <div class="top_banner">
+                            <img class="top_img" src="../img/detail/detail_img_06.png" alt="">
+                        </div>
+                        <div class="banner_img">
+                            <div class="banner_box">
+                                <img class="banner_box_img" src="../img/detail/detail_img_10.png" alt="">
+                                <img class="banner_box_img" src="../img/detail/detail_img_13.png" alt="">
+                                <img class="banner_box_img" src="../img/detail/detail_img_16.png" alt="">
+                                <img class="banner_box_img" src="../img/detail/detail_img_18.png" alt="">
+                                <img class="banner_box_img" src="../img/detail/detail_img_10.png" alt="">
+                                <img class="banner_box_img" src="../img/detail/detail_img_13.png" alt="">
+                                <img class="banner_box_img" src="../img/detail/detail_img_16.png" alt="">
+                                <img class="banner_box_img" src="../img/detail/detail_img_18.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom_banner">
+                            <img class="bottom_img" src="../img/detail/detail_img_21.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content_center_shuzi">
+                    <span class="shuzi_left"></span>
+                    <span class="shuzi_fenge">/</span>
+                    <span class="shuzi_right"></span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/index.js"></script>
+
+    <script src="../js/babel.js"></script>
+    <script type="text/babel">
+        window.onload = function (){
+            var num = 0;
+            var Gnum = $(".banner_box_img").length;
+            //下方数字
+            $(".shuzi_left").html('1')
+            $(".shuzi_right").html(Gnum)
+
+            // 向上滚动
+            $(".top_banner").click(function(){
+                num--;
+                if(num<=0){
+                    num = 0;
+                }
+                if(num>Gnum-4){
+                    $(".banner_box").css({"margin-top":0-(Gnum-4)*125+"px"})
+                    $(".banner_box_img").css({"border":"none"})
+                    $(".banner_box_img").eq(num).css({"border":"1px solid #4aa313"})
+                }else{
+                    $(".banner_box_img").css({"border":"none"})
+                    $(".banner_box_img").eq(num).css({"border":"1px solid #4aa313"})
+                    
+                    if(num<=0){
+                        $(".banner_box").css({"margin-top":0+"px"})
+                    }else{
+                        $(".banner_box").css({"margin-top":(0-(num))*125+"px"})
+                    }
+                }
+                console.log(num)
+                // src 获取
+                var src = $(".banner_box_img").eq(num).attr("src")
+                $(".left_image").attr("src",src)
+                //下方数字
+                $(".shuzi_left").html(num+1)
+            })
+            // 向下滚动
+            $(".bottom_banner").click(function(){
+                num++;
+                if(num>=Gnum){
+                    num = Gnum-1;
+                }
+                
+                    $(".banner_box_img").css({"border":"none"})
+                    $(".banner_box_img").eq(num).css({"border":"1px solid #4aa313"})
+                    if(num<Gnum-4){
+                        $(".banner_box").css({"margin-top":0-num*125+"px"})
+                    }else{
+                        $(".banner_box").css({"margin-top":0-(Gnum-4)*125+"px"})
+                    }
+                console.log(num)
+                // src 获取
+                var src = $(".banner_box_img").eq(num).attr("src")
+                $(".left_image").attr("src",src)
+                //下方数字
+                $(".shuzi_left").html(num+1)
+            })
+            
+        } 
+    </script>
+</body>
+
+</html>

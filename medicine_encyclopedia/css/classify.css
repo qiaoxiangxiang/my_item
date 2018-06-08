@@ -1,0 +1,73 @@
+.content{
+    width: 100%;
+}
+.classify_top{
+    width: 100%;
+    background: #f4f6f8;
+}
+.classify_nav{
+    width: 1200px;
+    height: 125px;
+    padding: 30px 0 23px;
+    margin: 0 auto;
+}
+.classify_nav2{
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    font-size: 24px;
+    color: #333;
+    line-height: 80px;
+}
+.classify_nav_list{
+    width: 90px;
+    height: 120px;
+    text-align: center;
+}
+.classify_nav_list_img{
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+}
+.classify_nav_list>p{
+    font-size: 14px;
+    color: #333333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+
+}
+.classify_nav_list:hover p{
+    color: #4aa313;
+}
+/* 分类 */
+.classify_classify{
+    width: 1200px;
+    margin: 0 auto;
+}
+.classify_classify>a:nth-of-type(4n) .classify_classify_list{
+    margin-right: 0;
+}
+.classify_classify_list{
+    width: 280px;
+    height: 200px;
+    padding-top: 20px;
+    float: left;
+    margin-right: 26px;
+}
+.classify_classify_img{
+    width: 280px;
+    height: 145px;
+}
+.classify_classify_p{
+    width: 280px;
+    height: 45px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #333;
+    margin-top: 16px;
+}
+.classify_classify_list:hover .classify_classify_p{
+    color: #4aa313;
+}

@@ -2,72 +2,14 @@
     width: 100%;
     background: #f4f4f4;
 }
-.content_top_img{
-    width: 1920px;
-    height: 100%;
-}
 .top_content{
-    width: 100%;
     height: 300px;
-    position: absolute;
-    top: 0;
-}
-.top_content_box_img{
-    width: 185px;
-    height: 48px;
-    float: left;
-    margin-top: 13px;
 }
 .top_content_box{
-    width: 1200px;
-    height: 78px;
     border-bottom: 1px solid rgba(255,255,255,0.3);
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    left: 360px;
 }
-.top_content_nav{
-    width: 739px;
-    float:left;
-    margin-left: 100px;
-    margin-top: 30px;
-}
-.top_nav_left{
-    float: left;
-    margin-right: 50px;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer
-}
-.top_content_nav a:nth-last-of-type(1) .top_nav_left{
-    margin-right: 0;
-}
-.denglu{
-    width: 175px;
-    height: 32px;
-    float: left;
-    margin-top: 21px;
-}
-.top_nav_right{
-    display: block;
-    width: 76px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    float: left;
-    margin-left: 18px;
-    font-size: 16px;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    cursor: pointer
-}
-.denglu a:nth-of-type(1) .top_nav_right{
-    margin-left: 0;
-}
-.top_nav_right:hover{
-    background: rgba(255,255,255,0.3)
+.content_top_img{
+    height: 368px;
 }
 .top_content_sousuo{
     width: 1022px;
@@ -175,6 +117,7 @@
 .title_txt_p{
     float: left;
     margin-top: 15px; 
+    color: #4aa313;
 }
 /* 最新 */
 .newest{
@@ -182,6 +125,9 @@
     height: 185px;
     margin-left: 22px;
     margin-bottom: 23px;
+}
+.newest:hover .newest_text{
+    color: #4aa313;
 }
 .newest_img{
     width: 100%;
@@ -210,6 +156,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+}
+.host:hover .host_text{
+    color: #4aa313;
 }
 /* 药材动态 */
 .dynamic{
@@ -255,6 +204,7 @@
 }
 .dynamic_li{
     padding: 11px 0;
+    cursor: pointer;
 }
 .dynamic_li:nth-of-type(1){
     border-bottom: 1px dashed #cccccc;
@@ -276,6 +226,12 @@
     float: right;
     font-size: 13px;
     color: #999;
+}
+.dynamic_li:hover .dynamic_li_text{
+    color: #4aa313
+}
+.dynamic_li:hover .dynamic_li_time{
+    color: #4aa313
 }
 .dynamic_li_div{
     margin-bottom: 11px;
