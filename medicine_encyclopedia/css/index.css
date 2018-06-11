@@ -10,6 +10,7 @@ a,p,h4,ul,li{
 }
 img{
     display: block;
+    border: none;
 }
 #app_body{
     max-width: 1920px;
@@ -45,8 +46,8 @@ img{
     top: 0;
 }
 .top_content_box_img{
-    width: 185px;
-    height: 48px;
+    width: 184px;
+    height: 45px;
     float: left;
     margin-top: 13px;
 }
