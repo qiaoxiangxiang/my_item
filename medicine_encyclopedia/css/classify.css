@@ -10,6 +10,7 @@
     height: 125px;
     padding: 30px 0 23px;
     margin: 0 auto;
+    overflow: hidden;
 }
 .classify_nav2{
     width: 1200px;
@@ -23,11 +24,20 @@
     width: 90px;
     height: 120px;
     text-align: center;
+    display: inline-block;
 }
-.classify_nav_list_img{
+.classify_nav_list_img_box,.classify_nav_list_img{
     width: 90px;
     height: 90px;
+    border-radius: 50%;
+    
+}
+.classify_nav_list_img_box{
+    overflow: hidden;
     margin-bottom: 10px;
+}
+.classify_nav_list_img{
+    transition: all .2s;
 }
 .classify_nav_list>p{
     font-size: 14px;
@@ -40,6 +50,11 @@
 }
 .classify_nav_list:hover p{
     color: #4aa313;
+}
+.classify_nav_list:hover .classify_nav_list_img{
+    width: 110px;
+    height: 110px;
+    margin: -10px 0 0 -10px;
 }
 /* 分类 */
 .classify_classify{
@@ -56,9 +71,13 @@
     float: left;
     margin-right: 26px;
 }
-.classify_classify_img{
+.classify_classify_img,.classify_classify_img_box{
     width: 280px;
     height: 145px;
+    transition: all .2s;
+}
+.classify_classify_img_box{
+    overflow: hidden;
 }
 .classify_classify_p{
     width: 280px;
@@ -71,3 +90,48 @@
 .classify_classify_list:hover .classify_classify_p{
     color: #4aa313;
 }
+.classify_classify_list:hover .classify_classify_img{
+    width: 300px;
+    height: 156px;
+    margin: -6px 0 0 -6px;
+}
+/* 轮播切换 */
+.swiper-button-next,.swiper-button-prev{
+    width: 30px;
+    height: 120px;
+    background: #cfcfd0;
+    top: 18px;
+    line-height: 120px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+.swiper-button-next:hover,.swiper-button-prev:hover{
+    background: #4aa313;
+}
+.swiper-button-prev{
+    left: -30px;
+}
+.swiper-button-next{
+    right: -30px;
+}
+.swiper-button-disabled{
+    opacity: 1 !important;
+}
+.swiper-container{
+    width: 1140px;
+    overflow: inherit;
+}
+.swiper-slide>a{
+    display: block;
+    text-align: center;
+}
+.swiper-button-disabled{
+    opacity: 1;
+     cursor: pointer !important;
+    pointer-events: auto !important;
+}
+
+
+

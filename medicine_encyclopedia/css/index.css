@@ -21,6 +21,7 @@ img{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    font-family: 微软雅黑;
 }
 /* 头部 */
 .content_top{
@@ -28,7 +29,7 @@ img{
 }
 .border_bottom {
     width: 110%;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #fff;
     display: block;
     position: absolute;
     bottom: -9px;

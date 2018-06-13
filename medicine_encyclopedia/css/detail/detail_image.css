@@ -57,6 +57,12 @@
 .top_banner,.bottom_banner{
     background: rgba(255,255,255,.1); 
 }
+.top_banner:hover{
+    background: #4aa313;
+}
+.bottom_banner:hover{
+    background: #4aa313;
+}
 .top_img,.bottom_img{
     width: 20px;
     height: 14px;

@@ -39,10 +39,10 @@ $(".gong_top").append(`
             </a>
         </div>
         <div class="denglu">
-            <a href="">
+            <a href="land.html">
                 <span class="top_nav_right">登陆</span>
             </a>
-            <a href="">
+            <a href="login_account.html">
                 <span class="top_nav_right">注册</span>
             </a>
         </div>

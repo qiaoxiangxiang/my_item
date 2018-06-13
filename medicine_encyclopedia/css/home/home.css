@@ -77,7 +77,7 @@
     width: 335px;
     height: 100%;
     float: left;
-    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 8px rgba(0,0,0,.2);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -87,7 +87,7 @@
     height: 100%;
     float: left;
     margin: 0 20px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 8px rgba(0,0,0,.2);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -96,7 +96,7 @@
     width: 335px;
     height: 100%;
     float: left;
-    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 8px rgba(0,0,0,.2);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -132,13 +132,24 @@
     height: 185px;
     margin-left: 22px;
     margin-bottom: 23px;
+    
 }
 .newest:hover .newest_text{
     color: #4aa313;
 }
-.newest_img{
-    width: 100%;
-    height: 150px;
+.newest:hover .newest_img{
+    width: 310px;
+    height: 166px;
+    margin: -8px 0 0 -10px;  
+   
+}
+.newest_img_box{
+    overflow: hidden;
+}
+.newest_img,.newest_img_box{
+    width: 290px;
+    height: 150px; 
+    transition: all .2s;
 }
 .newest_text{
     font-size: 16px;
@@ -148,6 +159,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+    transition: all .2s;
 }
 .host{
     width: 200px;
@@ -163,9 +175,21 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+    transition: all .2s;
 }
 .host:hover .host_text{
     color: #4aa313;
+}
+.host:hover .host_img{
+    width: 220px;
+    height: 121px;
+    margin:-8px 0 0 -10px;
+}
+.host_img_box,.host_img{
+    width: 200px;
+    height: 105px;
+    overflow: hidden;
+    transition: all .2s;
 }
 /* 药材动态 */
 .dynamic{
@@ -208,6 +232,9 @@
     font-size: 16px;
     color: #999;
     float: right;
+}
+.dynamic_title_gengduo:hover{
+    color: #4aa313;
 }
 .dynamic_li{
     padding: 11px 0;

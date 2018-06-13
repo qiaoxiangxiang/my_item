@@ -78,26 +78,7 @@
                 if(num<=0){
                     num = 0;
                 }
-                if(num>Gnum-4){
-                    $(".banner_box").css({"margin-top":0-(Gnum-4)*125+"px"})
-                    $(".banner_box_img").css({"border":"none"})
-                    $(".banner_box_img").eq(num).css({"border":"1px solid #4aa313"})
-                }else{
-                    $(".banner_box_img").css({"border":"none"})
-                    $(".banner_box_img").eq(num).css({"border":"1px solid #4aa313"})
-                    
-                    if(num<=0){
-                        $(".banner_box").css({"margin-top":0+"px"})
-                    }else{
-                        $(".banner_box").css({"margin-top":(0-(num))*125+"px"})
-                    }
-                }
-                console.log(num)
-                // src 获取
-                var src = $(".banner_box_img").eq(num).attr("src")
-                $(".left_image").attr("src",src)
-                //下方数字
-                $(".shuzi_left").html(num+1)
+                topBanner()
             })
             // 向下滚动
             $(".bottom_banner").click(function(){
@@ -105,22 +86,57 @@
                 if(num>=Gnum){
                     num = Gnum-1;
                 }
-                
-                    $(".banner_box_img").css({"border":"none"})
-                    $(".banner_box_img").eq(num).css({"border":"1px solid #4aa313"})
-                    if(num<Gnum-4){
-                        $(".banner_box").css({"margin-top":0-num*125+"px"})
+                bottomBanner()
+            })
+            // 图片点击
+            for(let i=0;i<$(".banner_box_img").length;i++){
+                $(".banner_box_img").eq(i).click(function(){
+                    if(num<i){
+                        num = i;
+                        bottomBanner();
                     }else{
-                        $(".banner_box").css({"margin-top":0-(Gnum-4)*125+"px"})
+                        num = i;
+                        topBanner();
                     }
+                   
+                })
+            }
+            // top_banner --
+            function topBanner(){
+                if(num<=0){
+                    $(".banner_box").css({"margin-top":0+"px"})
+                }else{
+                    if(num>=Gnum-4){
+                        $(".banner_box").css({"margin-top":0-(num-3)*125+"px"})
+                    }else{
+                        $(".banner_box").css({"margin-top":0+"px"})
+                    }
+                }
+                $(".banner_box_img").css({"border":"none"})
+                $(".banner_box_img").eq(num).css({"border":"1px solid #4aa313"})
                 console.log(num)
                 // src 获取
                 var src = $(".banner_box_img").eq(num).attr("src")
                 $(".left_image").attr("src",src)
                 //下方数字
                 $(".shuzi_left").html(num+1)
-            })
-            
+            }
+            // bottom_banner ++
+            function bottomBanner(){
+                $(".banner_box_img").css({"border":"none"})
+                $(".banner_box_img").eq(num).css({"border":"1px solid #4aa313"})
+                if(num<Gnum-4){
+                    $(".banner_box").css({"margin-top":0-num*125+"px"})
+                }else{
+                   $(".banner_box").css({"margin-top":0-(Gnum-4)*125+"px"})
+                }
+                console.log(num)
+                // src 获取
+                var src = $(".banner_box_img").eq(num).attr("src")
+                $(".left_image").attr("src",src)
+                //下方数字
+                $(".shuzi_left").html(num+1)
+            }
         } 
     </script>
 </body>

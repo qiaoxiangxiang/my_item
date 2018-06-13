@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!--本页引入-->
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/layui.mobile.css">
+    <link rel="stylesheet" href="../css/land.css">
+    <script src="../js/index_top.js"></script>
+    <script src="../js/regular.js"></script>
+</head>
+
+<body>
+<div id="app_body">
+    <div class="gong_top"></div>
+    <div class="content">
+        <img class="content_img" src="../img/home/land_02.jpg" alt="">
+        <div class="land_div">
+
+            <div class="land_div_div land_div_div1">
+                <!--登录-->
+                <div class="register" style="display: block;">
+                    <div class="phone_number4">
+                        <img src="../img/home/land_phone_11.png" alt="" class="phone_number_img">
+                        <input placeholder="手机号码" type="text" class="phone_number_input Phone">
+                    </div>
+                    <div class="phone_number2 phone_number2_graphic">
+                        <img src="../img/home/land_anquan_15.jpg" alt="" class="phone_number_img">
+                        <input placeholder="图形验证码" type="text" class="phone_number_input Yan_zheng">
+                        <div class="verification_graphic">
+                            <canvas id="mycanvas" width="100%" height="100%">
+                                您的浏览器不支持canvas，请换个浏览器试试~
+                            </canvas>
+                        </div>
+                    </div>
+                    <!---->
+                    <!---->
+                    <div class="phone_number3 pass_word">
+                        <img src="../img/home/phone_number_img_15.png" alt="" class="phone_number_img">
+                        <input placeholder="密码" type="password" class="phone_number_input passWord">
+                    </div>
+                    <div class="phone_number3 e_mail">
+                        <img src="../img/home/mail_19.jpg" alt="" class="phone_number_img">
+                        <input placeholder="邮件" type="text" class="phone_number_input Email">
+                    </div>
+                    <p class="land_p">
+                        <a href="reset.html">
+                            <span class="land_p_span">忘记密码？</span>
+                        </a>
+                        <a href="land.html">
+                            <span class="land_p_span_right">
+                                已有账号，快速去登录
+                            </span>
+                        </a>
+                    </p>
+                    <div class="signin signin1">
+                        快速注册
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gong_bottom"></div>
+</div>
+</body>
+<script src="../js/index.js"></script>
+
+<script src="../js/graphic_veriry.js"></script>
+<script>
+    window.onload = function () {
+        $(".Phone").change(function () {
+            if (checkTel($(this).val())) {
+                $(".phone_number4").css({ "border-color": "#4aa313" })
+            } else {
+                $(".phone_number4").css({ "border-color": "#ff5656" })
+            }
+        })
+        $(".passWord").change(function(){
+            if(Validator_PassWord($(this).val())) {
+                $(".pass_word").css({"border-color": "#4aa313"})
+            }else {
+                $(".pass_word").css({ "border-color": "#ff5656" })
+            }
+        })
+        $(".Email").change(function(){
+            if(Validator_Email($(this).val())) {
+                $(".e_mail").css({"border-color": "#4aa313"})
+            }else {
+                $(".e_mail").css({ "border-color": "#ff5656" })
+            }
+        })
+
+    }
+
+</script>
+
+</html>
